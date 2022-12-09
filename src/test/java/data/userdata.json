@@ -1,0 +1,32 @@
+[
+  {
+    "id": 40,
+    "username": "kinginnorth",
+    "firstName": "John",
+    "lastName": "Snow",
+    "email": "nighwatch@gmail.com",
+    "password": "stark@123",
+    "phone": "0123456789",
+    "userStatus": 0
+  },
+  {
+    "id": 41,
+    "username": "wheelbreaker",
+    "firstName": "Daenrys",
+    "lastName": "Targaryen",
+    "email": "dracarys@gmail.com",
+    "password": "Targaryen@123",
+    "phone": "0123456789",
+    "userStatus": 0
+  },
+  {
+    "id": 41,
+    "username": "knightking",
+    "firstName": "Long",
+    "lastName": "Night",
+    "email": "dragonblade@gmail.com",
+    "password": "Night@123",
+    "phone": "0123456789",
+    "userStatus": 0
+  }
+]
