@@ -15,7 +15,7 @@ import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import org.apache.commons.io.FileUtils;
 
-public class FeatureRunner {
+public class TestRunner {
 	@Test
 	void testParallel() {
 		Results results = Runner.path("classpath:features/Store.feature")
