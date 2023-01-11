@@ -1,2 +1,2 @@
 # NextGen-APIAutomation
-API Automation Suite
+API Automation Test Suite
