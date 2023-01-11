@@ -1,0 +1,33 @@
+{
+  "message": "#string",
+  "token": {
+    "access_token": "#string",
+    "expires_in": "#number",
+    "refresh_expires_in": "#number",
+    "refresh_token": "#string",
+    "token_type": "#string",
+    "id_token": "#string",
+    "session_state": "#string",
+    "scope": "#string",
+    "not_before_policy": null
+  },
+  "user": {
+    "id": "#number",
+    "password": "#string",
+    "email": "#string",
+    "userId": "#string",
+    "firstName": "#string",
+    "lastName": "#string",
+    "name": "#string",
+    "registeredAt": "#notnull",
+    "enabled": true,
+    "dob": "#notnull",
+    "gender": "#string",
+    "keyCloakUserId": null,
+    "scope": "#string",
+    "pictureUrl": null,
+    "role": null,
+    "emailGoogleVerified": null
+  },
+  "userId": "#string"
+}

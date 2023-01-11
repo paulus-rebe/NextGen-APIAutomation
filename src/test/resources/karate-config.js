@@ -1,4 +1,4 @@
-function fn() {   
+function() {   
   var env = karate.env; 
   karate.log('Test Environment Selected :', env);
   if (!env) {
@@ -6,7 +6,7 @@ function fn() {
   }
   var config = { 
 		
-    StoreBaseURL: 'https://petstore.swagger.io/v2/user'
+    BaseURL: 'tere'
  
   };
  
