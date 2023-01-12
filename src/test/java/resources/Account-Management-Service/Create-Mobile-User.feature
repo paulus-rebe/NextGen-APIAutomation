@@ -1,5 +1,5 @@
-@Account-Management-Service
-Feature: Test cases covering account management service call validations
+@Create-Mobile-User
+Feature: Test cases covering create mobile user call validations
 
   Background: 
     * def hostUrl = 'https://qa.rvdo.link/api-gateway/api/v1/account-management'
@@ -19,7 +19,7 @@ Feature: Test cases covering account management service call validations
     And match response == read('classpath:payload/CreateMobileUser_Response.json')
 
   @SchemaValidations
-  Scenario: Validate schema when front end developer utilise the endpoint - '/create-mobile-user with method POST
+  Scenario: Validate schema when front end developer utilise the endpoint - '/create-mobile-user' with method POST
     Given path  '/create-mobile-user'
     * def emailObj = Java.type('utility.Utilities')
     * def email = new emailObj().createRandomEmail();
@@ -41,7 +41,7 @@ Feature: Test cases covering account management service call validations
     Then print response
     And match response.status == 404
 
-  @NullResponseValidate
+  @Null&EmptyResponseValidate
   Scenario Outline: Validate when front end developer utilise create-mobile-user with null or empty values
     Given path  '/create-mobile-user'
     And request {"email" : <email>,"password" : <password>,"firstName" : <firstName>,"lastName" : <lastName>,"dob" : <dob>,"gender" : <gender>}
@@ -50,18 +50,18 @@ Feature: Test cases covering account management service call validations
     And match response.status == 500
 
     Examples: 
-      | email             | password | firstName | lastName   | dob                      | gender |
-      | null              | Test@123 | Test      | Automation | 1994-01-11T10:50:25.762Z | Male   |
-      | ATest6@gmail.com  | null     | Test      | Automation | 1994-01-11T10:50:25.762Z | Male   |
-      | ATest7@gmail.com  | Test@123 | null      | Automation | 1994-01-11T10:50:25.762Z | Male   |
-      | ATest8@gmail.com  | Test@123 | Test      | null       | 1994-01-11T10:50:25.762Z | Male   |
-      | ATest9@gmail.com  | Test@123 | Test      | Automation | null                     | Male   |
-      | ATest10@gmail.com | Test@123 | Test      | Automation | 1994-01-11T10:50:25.762Z | null   |
-      | null              | null     | null      | null       | null                     | null   |
-      | ''                | Test@123 | Test      | Automation | 1994-01-11T10:50:25.762Z | Male   |
-      | ATest11@gmail.com | ''       | Test      | Automation | 1994-01-11T10:50:25.762Z | Male   |
-      | ATest12@gmail.com | Test@123 | ''        | Automation | 1994-01-11T10:50:25.762Z | Male   |
-      | ATest13@gmail.com | Test@123 | Test      | ''         | 1994-01-11T10:50:25.762Z | Male   |
-      | ATest14@gmail.com | Test@123 | Test      | Automation | ''                       | Male   |
-      | ATest15@gmail.com | Test@123 | Test      | Automation | 1994-01-11T10:50:25.762Z | ''     |
-      | ''                | ''       | ''        | ''         | ''                       | ''     |
+      | email               | password | firstName | lastName   | dob                      | gender |
+      | null                | Test@123 | Test      | Automation | 1994-01-11T10:50:25.762Z | Male   |
+      | ABTest2@gmail.com   | null     | Test      | Automation | 1994-01-11T10:50:25.762Z | Male   |
+      | ABTest27@gmail.com  | Test@123 | null      | Automation | 1994-01-11T10:50:25.762Z | Male   |
+      | ABTest28@gmail.com  | Test@123 | Test      | null       | 1994-01-11T10:50:25.762Z | Male   |
+      | ABTest29@gmail.com  | Test@123 | Test      | Automation | null                     | Male   |
+      | ABTest210@gmail.com | Test@123 | Test      | Automation | 1994-01-11T10:50:25.762Z | null   |
+      | null                | null     | null      | null       | null                     | null   |
+      | ''                  | Test@123 | Test      | Automation | 1994-01-11T10:50:25.762Z | Male   |
+      | ABTest211@gmail.com | ''       | Test      | Automation | 1994-01-11T10:50:25.762Z | Male   |
+      | ABTest212@gmail.com | Test@123 | ''        | Automation | 1994-01-11T10:50:25.762Z | Male   |
+      | ABTest213@gmail.com | Test@123 | Test      | ''         | 1994-01-11T10:50:25.762Z | Male   |
+      | ABTest214@gmail.com | Test@123 | Test      | Automation | ''                       | Male   |
+      | ABTest215@gmail.com | Test@123 | Test      | Automation | 1994-01-11T10:50:25.762Z | ''     |
+      | ''                  | ''       | ''        | ''         | ''                       | ''     |
