@@ -40,7 +40,6 @@ Feature: Test cases covering create mobile user call validations
     And method POST
     Then print response
     And match response.status == 404
-
   #@Null&EmptyResponseValidate
   #Scenario Outline: Validate when front end developer utilise create-mobile-user with null or empty values
     #Given path  '/create-mobile-user'
