@@ -4,5 +4,10 @@
   "firstName" : "Test",
   "lastName" : "Automation",
   "dob" : "1994-01-11T10:50:25.762Z",
-  "gender" : "Female"
+  "gender" : "Female",
+  "countryCode": "AL",
+  "platform": "Android",
+  "walletAddress": "string",
+  "walletType": "Metamask"
 }
+

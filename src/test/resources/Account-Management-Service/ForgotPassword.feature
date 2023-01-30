@@ -25,12 +25,12 @@ Feature: Test cases covering forgot password test cases
     * def token = tokenValue.substring(tokenValue.indexOf("=")+1);
     * print token
     And path '/reset-password'
-    And request {"resetToken": '#(token)', "newPassword": "pass123"}
+    And request {"resetToken": '#(token)', "newPassword": "Pass@123"}
     Then method POST
     Then print response
     And match responseStatus ==200
     Given url 'https://qa.rvdo.link/api-gateway/api/v1/authentication/auth'
-    And request {"email": '#(email)', "password": "pass123"}
+    And request {"email": '#(email)', "password": "Pass@123"}
     Then method POST
     Then print response
     And match responseStatus ==200
@@ -54,7 +54,7 @@ Feature: Test cases covering forgot password test cases
     * def token = tokenValue.substring(tokenValue.indexOf("=")+1);
     * print token
     And path '/reset-password'
-    And request {"resetToken": '#(token)', "newPassword": "pass123"}
+    And request {"resetToken": '#(token)', "newPassword": "Pass@123"}
     Then method POST
     Then print response
     And match response == read('classpath:payload/resetpassword_Response.json')

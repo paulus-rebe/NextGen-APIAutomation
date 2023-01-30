@@ -1,14 +1,42 @@
 {
-  "token": {
-    "access_token": "#string",
-    "expires_in": "#number",
-    "refresh_expires_in": "#number",
-    "refresh_token": "#string",
-    "token_type": "#string",
-    "id_token": "#string",
-    "session_state": "#string",
-    "scope": "#string",
-    "not_before_policy": null
+  "token" : {
+    "access_token" : "#string",
+    "expires_in" : "#number",
+    "refresh_expires_in" : "#number",
+    "refresh_token" : "#string",
+    "token_type" : "#string",
+    "id_token" : "#string",
+    "session_state" : "#string",
+    "scope" : "#string",
+    "not_before_policy" : null
   },
-  "data": null
+  "status" : "#number",
+  "message" : "#string",
+  "userInfo" : {
+    "id" : null,
+    "email" : null,
+    "password" : null,
+    "gender" : null,
+    "dob" : null,
+    "firstName" : null,
+    "lastName" : null,
+    "registeredAt" : null,
+    "status" : null,
+    "pictureUrl" : null,
+    "name" : null,
+    "emailGoogleVerified" : null,
+    "keyCloakUserId" : null,
+    "userId" : "#string",
+    "role" : null,
+    "scope" : null,
+    "country" : null,
+    "projectCount" : null,
+    "exportCount" : null,
+    "platform" : null,
+    "walletAddress" : null,
+    "walletType" : null,
+    "lastAccess" : null,
+    "locale" : null
+  },
+  "data" : null
 }
