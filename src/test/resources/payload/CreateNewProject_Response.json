@@ -1,0 +1,40 @@
+{
+  "id": "#number",
+  "email": "#string",
+  "userId": "#string",
+  "name": "#string",
+  "title": "#string",
+  "description": "#string",
+  "dateCreated": "#string",
+  "lastModified": "#string",
+  "status": "#string",
+  "templateIds": "#string",
+  "templates": [
+    {
+      "id": "#number",
+      "title": "#string",
+      "description": "#string",
+      "videoUrls": null,
+      "videoTime": "#string",
+      "thumbnailUrls": [
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string",
+        "#string"
+      ],
+      "purchasedByUser": "#boolean",
+      "purchaseDate": null,
+      "transactionId": null
+    }
+  ]
+}

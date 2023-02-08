@@ -7,7 +7,7 @@ Feature: Test cases covering create mobile user call validations
     * url hostUrl
 
   @HappyPath
-  Scenario: Validate response when front end developer utilise the endpoint - '/create-mobile-user with method POST
+  Scenario: Validate response when front end developer utilise the endpoint - '/create-mobile-user' with method POST
     Given path  '/create-mobile-user'
     * def emailObj = Java.type('utility.Utilities')
     * def email = new emailObj().createRandomEmail();
