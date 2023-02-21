@@ -13,9 +13,9 @@
     {
       "id": "#number",
       "title": "#string",
-      "description": "#string",
+      "description": null,
       "videoUrls": null,
-      "videoTime": "#string",
+      "videoTime": null,
       "thumbnailUrls": [
         "#string",
         "#string",

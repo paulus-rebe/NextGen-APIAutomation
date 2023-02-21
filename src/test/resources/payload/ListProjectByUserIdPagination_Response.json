@@ -11,7 +11,7 @@
             "templateIds": "#string",
             "templates": [
                 {
-                    "description": "#string",
+                    "description": null,
                     "id": "#number",
                     "purchaseDate": null,
                     "purchasedByUser": "#boolean",
@@ -33,7 +33,7 @@
                     ],
                     "title": "#string",
                     "transactionId": null,
-                    "videoTime": "#string",
+                    "videoTime": null,
                     "videoUrls": null
                 }
             ],
@@ -67,3 +67,5 @@
     "totalElements": "#number",
     "totalPages": "#number"
 }
+
+
