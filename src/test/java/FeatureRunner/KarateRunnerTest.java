@@ -1,5 +1,7 @@
 package FeatureRunner;
 
+import static org.junit.Assert.*;
+
 import java.io.File;
 
 import java.util.ArrayList;
@@ -10,42 +12,36 @@ import org.apache.commons.io.FileUtils;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.intuit.karate.cucumber.CucumberRunner;
-import com.intuit.karate.cucumber.KarateStats;
-
-import cucumber.api.CucumberOptions;
+import com.intuit.karate.Results;
+import com.intuit.karate.Runner;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 
-//tags = "@Mobile-user-exists",
-//to run single or multi tags use above
-@CucumberOptions(features = { "classpath:resources/" })
 public class KarateRunnerTest {
 
 	@BeforeClass
-	public static void beforeClass() {
+	public static void beforeClass() {	
 		System.setProperty("karate.env", "qa");
 	}
-
 	@Test
 	public void testParallel() {
-		String OutputPath = "target/surefire-reports";
-		KarateStats stats = CucumberRunner.parallel(getClass(), 10, OutputPath);
-		generateTestReport(OutputPath);
+		Results results = Runner.path("src/test/java/resources)
+				 .outputCucumberJson(true)
+				.parallel(1);
+		String OutputPath = results.getReportDir();
+		File f = new File(OutputPath);
+		if (f.exists() && f.isDirectory())
+			generateReport(OutputPath);
+		assertTrue(results.getErrorMessages(), results.getFailCount() == 0);
 	}
 
-	private static void generateTestReport(String OutputPath) {
-		Collection<File> jsonFiles = FileUtils.listFiles(new File(OutputPath), new String[] { "json" }, true);
-		List<String> jsonPaths = new ArrayList(jsonFiles.size());
-		for (File file : jsonFiles) {
-			jsonPaths.add(file.getAbsolutePath());
-		}
-		File file = new File("Execution report");
-		file.mkdirs();
-		Configuration config = new Configuration(file, "API Execution Report");
-		ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
-		reportBuilder.generateReports();
-
-	}
+	 public static void generateReport(String karateOutputPath) {        
+	        Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[] {"json"}, true);
+	        final List<String> jsonPaths = new ArrayList(jsonFiles.size());
+	        jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
+	        Configuration config = new Configuration(new File("target"), "demo");
+	        ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
+	        reportBuilder.generateReports();        
+	    }
 
 }
