@@ -89,5 +89,26 @@ public class DBConnector {
 			e.printStackTrace();
 		}
 	}
+	
+	public void clearAllLicense() throws SQLException {
+		try {
+
+			String driver = "org.postgresql.Driver";
+			String connection = "jdbc:postgresql://license-management-qa.caspbjhnrhyo.ap-northeast-2.rds.amazonaws.com:5432/license_management";
+			String userName = "postgres";
+			String password = "kemhu3-gokjez-bobdiX";
+			Class.forName(driver);
+			con = DriverManager.getConnection(connection, userName, password);
+			stmt = con.createStatement();
+			String query1 = "Delete from public.t_license_object;";
+			String query2 = "Delete from public.t_license;";
+			int rowsdeleted1 = stmt.executeUpdate(query1);
+			int rowsdeleted2 = stmt.executeUpdate(query2);
+			System.out.println("Number of rows deleted " + rowsdeleted1 + "And " + rowsdeleted2);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 }

@@ -1,0 +1,23 @@
+{
+  "id": "#number",
+  "name": "#string",
+  "status": "#string",
+  "createdBy": "#string",
+  "createdAt": "#string",
+  "updatedBy": null,
+  "updatedAt": null,
+  "price": "#number",
+  "validFrom": "#string",
+  "validUntil": "#string",
+  "type": {
+    "id": "#number",
+    "name": "#string",
+    "description": "#string",
+    "displayOrder": "#number"
+  },
+  "licenseObject": {
+    "id": "#number",
+    "objectType": "#string",
+    "objectId": "#number"
+  }
+}
