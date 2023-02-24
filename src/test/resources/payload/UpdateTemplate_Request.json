@@ -1,0 +1,11 @@
+{
+  "id": "#(createdId)",
+  "title": "Test-Template",
+  "about": "API-Test",
+  "keywords": [
+    "API-Testing"
+  ],
+  "brief": "string",
+  "updatedBy": "#(email)",
+  "status": "draft"
+}
