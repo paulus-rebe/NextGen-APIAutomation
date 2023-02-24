@@ -1,0 +1,7 @@
+{
+  "status": "CONFLICT",
+  "message": "Email is exist",
+  "errors": [
+    "Email is exist"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "#number",
+  "title": "Test-Template",
+  "videoUrl": null,
+  "about": "API-Test",
+  "durationInSecond": null,
+  "price": null,
+  "nftObjectCount": null,
+  "thumbnailUrls": null,
+  "keywords": [
+    "API-Testing"
+  ],
+  "highlightCutUrls": null,
+  "licenseTypeId": null,
+  "licenseTypeName": "",
+  "userSetting": null,
+  "popularity": null,
+  "createdBy": "#string",
+  "owner": null,
+  "createdAt": "#notnull",
+  "updatedBy": "#(email)",
+  "updatedAt": null,
+  "brief": "string",
+  "status": "DRAFT",
+  "t3dObjects": [],
+  "cutscenes": [],
+  "templateTexts": [],
+  "templateSounds": [],
+  "cameraAngles": [],
+  "designSets": [
+    {
+      "id": "#number",
+      "resourceUrl": null,
+      "thumbnailUrl": null,
+      "name": "'Plane (Akirfa)' set",
+      "setType": "OUTDOOR"
+    },
+    {
+      "id": "#number",
+      "resourceUrl": null,
+      "thumbnailUrl": null,
+      "name": "'Canal (Naru)' set",
+      "setType": "OUTDOOR"
+    },
+    {
+      "id": "#number",
+      "resourceUrl": null,
+      "thumbnailUrl": null,
+      "name": "'Forest (Sinsi)' set",
+      "setType": "OUTDOOR"
+    },
+    {
+      "id": "#number",
+      "resourceUrl": null,
+      "thumbnailUrl": null,
+      "name": "'Snow Mountain (Albus)' set",
+      "setType": "OUTDOOR"
+    },
+    {
+      "id": "#number",
+      "resourceUrl": null,
+      "thumbnailUrl": null,
+      "name": null,
+      "setType": "INTERIOR"
+    }
+  ],
+  "templateEvents": [],
+  "templateCategories": []
+}

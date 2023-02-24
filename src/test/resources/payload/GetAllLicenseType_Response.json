@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "STANDARD FREE",
+    "description": "This object is provided free of charge to RVDO users.",
+    "displayOrder": 0
+  },
+  {
+    "id": 2,
+    "name": "STANDARD PREMIUM",
+    "description": "It is an object that RVDO users can purchase and use through in-app payment.",
+    "displayOrder": 0
+  },
+  {
+    "id": 3,
+    "name": "CUSTOM FREE",
+    "description": "This object was produced at the request of the client company, but is provided to all users of the RVDO through consultation with the client company",
+    "displayOrder": 0
+  },
+  {
+    "id": 4,
+    "name": "CUSTOM LIMITED",
+    "description": "This object can only be used by users who are allowed to use it by the customer",
+    "displayOrder": 0
+  }
+]

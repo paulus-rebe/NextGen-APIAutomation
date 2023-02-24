@@ -76,8 +76,8 @@ Feature: Test cases covering get otp call validations
     Then print response
     * def otpRetrieved = response.data
     And path '/validate-otp'
-    And request {  "otp": "0000","email": "#(emailGenerated)"}
+    And request {  "otp": 0001,"email": "#(emailGenerated)"}
     And method POST
     Then print response
-    Then assert responseStatus == 400
-    And match response == { "timestamp": "#string","status": 400,"error": "Bad Request","message": "Can't find OTP in DB","path": "#string"}
+    Then assert responseStatus == 404
+    And match response ==  {"status":"NOT_FOUND","message":"Can't find OTP in DB","errors":["Can't find OTP in DB"]}
