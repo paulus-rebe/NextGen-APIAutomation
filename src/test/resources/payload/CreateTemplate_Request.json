@@ -1,0 +1,10 @@
+{
+  "title": "Test-Template",
+  "about": "API-Test",
+  "keywords": [
+    "API-Testing"
+  ],
+  "createdBy": "#(email)",
+  "brief": "string",
+  "status": "ACTIVATED" 
+}
