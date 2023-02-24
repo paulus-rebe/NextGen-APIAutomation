@@ -25,7 +25,7 @@ public class KarateRunnerTest {
 	}
 	@Test
 	public void testParallel() {
-		Results results = Runner.path("src/test/java/resources)
+		Results results = Runner.path("src/test/java/resources")
 				 .outputCucumberJson(true)
 				.parallel(1);
 		String OutputPath = results.getReportDir();
