@@ -7,24 +7,18 @@ Feature: Test cases covering template management call validations
     * url hostUrl
 
   @HappyPath
-  Scenario: Validate response when front end developer utilise the endpoint - '/template with method POST'
+  Scenario: Validate response when front end developer utilise the endpoint - '/template' with method POST
     Given path  '/template'
     * def emailObj = Java.type('utility.Utilities')
     * def email = new emailObj().createRandomEmail();
     * def CreateTemplatePayload = read('classpath:payload/CreateTemplate_Request.json')
-    * print emailObj
-    * print email
     * print CreateTemplatePayload
     When request CreateTemplatePayload
     And method POST
     Then print response
     And status 201
     * def createdId = response.id
-    * print createdId
     And match response == read('classpath:payload/CreateTemplate_Response.json')
-    * def getIdCall = call read('Get-Template.feature') {createdId: "#(createdId)"}
-    * def updateIdCall = call read('Update-Template.feature') {createdId: "#(createdId)"}
-    * def deleteIdCall = call read('Delete-Template.feature') {createdId: "#(createdId)"}
 
   @SchemaValidations
   Scenario: Validate schema when front end developer utilise the endpoint - '/template' with method POST
